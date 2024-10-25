@@ -1,0 +1,43 @@
+@import url("https://fonts.googleapis.com/css2?family=Exo:ital,wght@0,100..900;1,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Share+Tech&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.swiper-button-next,
+.swiper-button-prev {
+  color: #4f46e5; /* Tailwind Indigo-600 */
+}
+
+.post-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.post-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.custom-checkbox {
+  appearance: none;
+  width: 24px; /* Adjust the size as needed */
+  height: 24px; /* Adjust the size as needed */
+  background-color: #fff;
+  border: 2px solid #f05225;
+  border-radius: 50px;
+  position: relative;
+  cursor: pointer; /* Make the cursor indicate non-editable */
+
+  /* For checked state */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.custom-checkbox:checked::before {
+  content: "";
+  width: 12px; /* Adjust the size of the checkmark as needed */
+  height: 12px; /* Adjust the size of the checkmark as needed */
+  background-color: #f05225;
+  border-radius: 50px;
+}
