@@ -7,19 +7,18 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 SECRET_KEY = 'django-insecure-i%)s)7z+&wv6++)bi=5!%d$dk)$qfb1hpzwmun06-n#!b$)%ct'
 DEBUG = True  # Set to True during development
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = [
+    '167.71.224.61',   # Your server's IP
+    'pruthatek.info',  # Your domain
+    'www.pruthatek.info',
+    '*'
+]
 
 # Add this to settings.py temporarily for debugging
 CORS_ALLOW_HEADERS = list(default_headers) + [
     'Access-Control-Allow-Origin',
 ]
 
-CORS_ORIGIN_WHITELIST = [
-    "https://167.71.224.61",
-    "http://pruthatek.info",
-    "https://pruthatek.info",
-    "http://localhost:5173"
-]
 
 CORS_ALLOWED_ORIGINS = [
     "http://localhost:3000",
@@ -28,10 +27,10 @@ CORS_ALLOWED_ORIGINS = [
     "http://localhost:8000",
     "http://127.0.0.1:8001",
     "http://localhost:5174",
-    "https://urban-space-telegram-w46qj6xwjrvf9w6x-8000.app.github.dev",
-    "https://167.71.224.61",
+    "http://167.71.224.61",
     "http://pruthatek.info",
-    "https://pruthatek.info"
+    "https://pruthatek.info",
+    "https://urban-space-telegram-w46qj6xwjrvf9w6x-8000.app.github.dev"
 ]
 
 CORS_ORIGIN_ALLOW_ALL = True
